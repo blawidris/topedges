@@ -4,8 +4,8 @@ services:
     # Application - PHP-FPM
     app:
         build:
-            context: ./php
-            dockerfile: Dockerfile
+            context: .
+            dockerfile: Dockerfile 
         container_name: app
         restart: unless-stopped
         tty: true
@@ -23,8 +23,8 @@ services:
         restart: unless-stopped
         tty: true
         ports:
-            - "8080:80"
-            - "8100:443"
+            - "8100:80"
+            - "8143:443"
         depends_on:
             - app
             - db
@@ -44,7 +44,7 @@ services:
             - "3306:3306"
         environment:
             - MYSQL_DATABASE=topedges
-            - MY_ROOT_PASSWORD=password
+            - MYSQL_ROOT_PASSWORD=password
         volumes:
             - mariadbdata:/var/lib/mysql
             - ./mysql/my.cnf:/etc/mysql/my.cnf
