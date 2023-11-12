@@ -1,24 +1,60 @@
-version: '3'
+version: '3.8'
+
 services:
-    topedges:
-        container_name: topedges-database
-        build: .
-        ports:
-            - 9000:80
+    # Application - PHP-FPM
+    app:
+        build:
+            context: ./php
+            dockerfile: Dockerfile
+        container_name: app
+        restart: unless-stopped
+        tty: true
+        working_dir: /var/www
         volumes:
-            - ./mysql-data:/var/lib/mysql
-    mysql_db:
-        image: mysql:latest
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: topedges-db
-            MYSQL_USER: laravel_user
-            MYSQL_PASSWORD: laravel_password
+            - ./src:/var/www
+            - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+        networks:
+            - app-network
+
+    # Webserver Nginx - Service
+    nginx:
+        container_name: ngnix
+        image: nginx:alpine
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "8080:80"
+            - "8100:443"
+        depends_on:
+            - app
+            - db
+        volumes:
+            - ./src:/var/www
+            - ./nginx/conf.d/:/etc/nginx/conf.d/
+        networks:
+            - app-network
+
+    # MariaDB - Service
+    db:
+        image: mariadb:10.5.6
+        container_name: db
+        restart: unless-stopped
+        tty: true
         ports:
             - "3306:3306"
-    phpmyadmin:
-        image: phpmyadmin:latest
-        ports:
-            - 9001:80
         environment:
-            - PMA_ARBITRARY=1
+            - MYSQL_DATABASE=topedges
+            - MY_ROOT_PASSWORD=password
+        volumes:
+            - mariadbdata:/var/lib/mysql
+            - ./mysql/my.cnf:/etc/mysql/my.cnf
+        networks:
+            - app-network
+
+volumes:
+    mariadbdata:
+        driver: local
+
+networks:
+    app-network:
+        driver: bridge
