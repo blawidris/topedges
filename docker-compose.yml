@@ -63,9 +63,9 @@ services:
         tty: true
         environment:
             - PMA_ARBITRARY=1
-            - PMA_HOST=${DB_HOST}
-            - PMA_USER=${DB_USER}
-            - PMA_PASSWORD=${DB_PASSWORD}
+            - PMA_HOST=db
+            - PMA_USER=root
+            - PMA_PASSWORD=password
         depends_on:
             - db
 

@@ -7,15 +7,15 @@
                 <div class="col-lg-9 col-md-8">
                     <div class="blog-post mb-30">
                         <div class="entry-image clearfix">
-                          <img class="{{asset('/'.$blogItem->image)}}"/>
+                          <img src="{{asset('/'.$blog->image)}}" class="img-fluid"/>
                         </div>
-                        <div class="blog-detail">
+                        <div class="blog-detail px-0"  style="background: transparent">
 
                             <div class="entry-title mb-10">
-                                <a href="#" class="fs-24">{{ $blog->title }}</a>
+                                <h2 class="fs-24 text-white">{{ $blog->title }}</h2>
                             </div>
                             <div class="entry-content">
-                                <p>{{ $blog->description }}</p>
+                                <p>{!! $blog->description !!}</p>
                             </div>
 
                         </div>

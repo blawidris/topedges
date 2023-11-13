@@ -36,7 +36,7 @@ RUN docker-php-ext-install pdo_mysql mbstring zip exif bcmath pcntl \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install Laravel Packages
-RUN composer install
+# RUN composer install
 
 # Add user for laravel application
 RUN groupadd -g 1000 www
