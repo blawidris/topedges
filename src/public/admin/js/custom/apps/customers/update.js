@@ -21,19 +21,21 @@ var KTModalUpdateCustomer = function () {
             // Show loading indication
             submitButton.setAttribute('data-kt-indicator', 'on');
 
+            const user_id = document.getElementById('user_id').value
+
             // Simulate form submission
             setTimeout(function () {
                 // Simulate form submission
                 submitButton.removeAttribute('data-kt-indicator');
 
                 fetch(hostUrl + "/customers/" + user_id, {
-                    method: "PUT",
+                    method: "POST",
                     headers: {
                         "X-CSRF-TOKEN": _token,
                         accept: "application/json",
-                        "Content-Type": "application/json",
+                        // "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(formData),
+                    body: formData,
                 })
                     .then((response) => response.json())
                     .then((result) => {

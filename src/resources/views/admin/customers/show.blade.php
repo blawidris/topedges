@@ -17,14 +17,14 @@
                                                 <div class="d-flex flex-center flex-column mb-5">
                                                     <!--begin::Avatar-->
                                                     <div class="symbol symbol-100px symbol-circle mb-7">
-                                                        <img src="{{asset($user->image ?? '/admin/media/avatars/300-1.jpg')}}" alt="image" />
+                                                        <img src="{{asset($user->image ?? 'https://e7.pngegg.com/pngimages/340/946/png-clipart-avatar-user-computer-icons-software-developer-avatar-child-face-thumbnail.png')}}" alt="image" />
                                                     </div>
                                                     <!--end::Avatar-->
 
                                                     <!--begin::Name-->
                                                     <a href="#"
                                                         class="fs-3 text-gray-800 text-hover-primary fw-bold mb-1">
-                                                        {{$user->name}}
+                                                        {{$user->name ?? ''}}
                                                      </a>
                                                     <!--end::Name-->
 
@@ -244,7 +244,7 @@
                                                     <!--begin::Card body-->
                                                     <div class="card-body pt-0">
                                                         <div class="fw-bold fs-2">
-                                                            ${{$user->wallet->current_balance}} <span
+                                                            ${{$user->wallet->current_balance ?? 0}} <span
                                                                 class="text-muted fs-4 fw-semibold">USD</span>
                                                             <div class="fs-7 fw-normal text-muted">Balance will increase
                                                                 the amount due on the customer's next invoice.</div>
@@ -336,7 +336,7 @@
                                                         <div class="fs-6 fw-semibold mb-2 text-muted">Current Balance
                                                         </div>
                                                         <div class="fs-2 fw-bold"
-                                                            kt-modal-adjust-balance="current_balance">US$ {{$user->wallet->current_balance}}
+                                                            kt-modal-adjust-balance="current_balance">US$ {{$user->wallet->current_balance ?? 0}}
                                                         </div>
                                                     </div>
                                                     <div
@@ -360,7 +360,7 @@
                                                 <!--begin::Form-->
                                                 <form id="kt_modal_adjust_balance_form" class="form" action="#">
                                                   <input type="hidden" name="user_id" value="{{$user->id}}">
-                                                  <input type="hidden" name="wallet_id" value="{{$user->wallet->id}}">
+                                                  <input type="hidden" name="wallet_id" value="{{$user->wallet->id ?? ''}}">
                                                   @method('PUT')
                                                     <!--begin::Input group-->
                                                     <div class="fv-row mb-7">
@@ -415,7 +415,8 @@
                                         <div class="modal-content">
                                             <!--begin::Form-->
                                             <form class="form" action="#" id="kt_modal_update_customer_form">
-                                                <input type="hidden" name="user_id" value="{{$user->id}}">
+                                                <input type="hidden" name="user_id" value="{{$user->id}}" id="user_id">
+                                                @method('PUT')
                                                 <!--begin::Modal header-->
                                                 <div class="modal-header" id="kt_modal_update_customer_header">
                                                     <!--begin::Modal title-->
@@ -539,7 +540,7 @@
                                                                 <!--begin::Input-->
                                                                 <input type="text"
                                                                     class="form-control form-control-solid"
-                                                                    placeholder="" name="name" value="{{$user->name}}" />
+                                                                    placeholder="" name="name" value="{{$user->name }}" />
                                                                 <!--end::Input-->
                                                             </div>
                                                             <!--end::Input group-->

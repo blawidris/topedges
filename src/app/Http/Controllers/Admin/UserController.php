@@ -56,13 +56,17 @@ class UserController extends Controller
     {
 
         // store data
-        $user = $user->find($request->user_id);
+        $user = $user->first();
 
         if (!$user) {
             return response()->json(['message' => 'Customer not found'], 404);
         }
 
+        // dd($request->all());
+
         $name = explode(' ', $request->name);
+
+        // dd($name);
 
         $updateUser = $user->update([
             'f_name' => $name[0],

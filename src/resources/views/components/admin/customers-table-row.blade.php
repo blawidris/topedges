@@ -8,7 +8,7 @@
          <a href="{{route('admin.customer.show', ['customer' => $user->id])}}" class="text-gray-800 text-hover-primary mb-1">{{$user->name}}</a>
      </td>
      <td>
-         <a href="#" class="text-gray-600 text-hover-primary mb-1">{{$user->email}}</a>
+         <a href="{{route('admin.customer.show', ['customer' => $user->id])}}" class="text-gray-600 text-hover-primary mb-1">{{$user->email}}</a>
      </td>
 
      <td data-filter="status">

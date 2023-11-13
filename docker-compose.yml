@@ -5,7 +5,7 @@ services:
     app:
         build:
             context: .
-            dockerfile: Dockerfile 
+            dockerfile: Dockerfile
         container_name: app
         restart: unless-stopped
         tty: true
@@ -52,22 +52,22 @@ services:
             - ./mysql/my.cnf:/etc/mysql/my.cnf
         networks:
             - app-network
-    
+
     # Database Manager
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         container_name: phpmyadmin
         ports:
-            - "8888:80"
+            - "8080:80"
         restart: unless-stopped
         tty: true
         environment:
-            - PMA_ARBITRARY=1
-            - PMA_HOST=db
-            - PMA_USER=root
-            - PMA_PASSWORD=password
-        depends_on:
-            - db
+            PMA_HOST: db
+            PMA_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: password
+            PMA_ARBITRARY: 1
+        networks:
+            - app-network
 
 volumes:
     mariadbdata:
