@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+    # Application - PHP-FPM
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: app
+        restart: unless-stopped
+        tty: true
+        working_dir: /var/www
+        volumes:
+            - ./src:/var/www
+            - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+        networks:
+            - app-network
+
+    # Webserver Nginx - Service
+    nginx:
+        container_name: ngnix
+        image: nginx:alpine
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "80:80"
+            - "443:443"
+        depends_on:
+            - app
+            - db
+        volumes:
+            - ./src:/var/www
+            - ./nginx/conf.d/:/etc/nginx/conf.d/
+            - ./nginx-logs:/var/log/nginx
+
+        networks:
+            - app-network
+
+    # MariaDB - Service
+    db:
+        image: mariadb:10.5.6
+        container_name: db
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "3306:3306"
+        environment:
+            - MYSQL_DATABASE=topedges
+            - MYSQL_ROOT_PASSWORD=password
+        volumes:
+            - mariadbdata:/var/lib/mysql
+            - ./mysql/my.cnf:/etc/mysql/my.cnf
+        networks:
+            - app-network
+
+    # Database Manager
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        ports:
+            - "8080:80"
+        restart: unless-stopped
+        tty: true
+        environment:
+            PMA_HOST: db
+            PMA_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: password
+            PMA_ARBITRARY: 1
+        networks:
+            - app-network
+
+volumes:
+    mariadbdata:
+        driver: local
+
+networks:
+    app-network:
+        driver: bridge
