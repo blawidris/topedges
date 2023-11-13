@@ -177,7 +177,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        PrevailExcel\Nowpayments\NowpaymentsServiceProvider::class,
+        // PrevailExcel\Nowpayments\NowpaymentsServiceProvider::class,
 
     ],
 
@@ -234,7 +234,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
-        'Nowpayments' => PrevailExcel\Nowpayments\Facades\Nowpayments::class,
+        // 'Nowpayments' => PrevailExcel\Nowpayments\Facades\Nowpayments::class,
     ],
 
 ];
