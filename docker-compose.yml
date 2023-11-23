@@ -9,9 +9,9 @@ services:
         container_name: app
         restart: unless-stopped
         tty: true
-        working_dir: /var/www
+        working_dir: /var/www/html
         volumes:
-            - ./src:/var/www
+            - ./src:/var/www/html
             - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
         networks:
             - app-network
@@ -29,7 +29,7 @@ services:
             - app
             - db
         volumes:
-            - ./src:/var/www
+            - ./src:/var/www/html
             - ./nginx/conf.d/:/etc/nginx/conf.d/
             - ./nginx-logs:/var/log/nginx
 

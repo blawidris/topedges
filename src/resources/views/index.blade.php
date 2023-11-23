@@ -36,7 +36,7 @@
     </div>
 
 
-    <script src="https://price-static.crypto.com/latest/public/static/widget/index.js" async></script>
+    <script src="https://price-static.crypto.com/latest/public/static/widget/index.js" defer></script>
 
     <div id="crypto-widget-CoinMarquee" data-transparent="true" data-theme="dark" data-design="modern"
         data-coin-ids="1,166,136,382,20,1120,1986,29,418,440"></div>
@@ -50,7 +50,7 @@
                         <h3>Grow Your Wealth</h3>
                         <p>
                             Take investment decisions that will help you grow your portfolio. As a leading and
-                            experienced investment platform, Resoprime is built on the principle that we succeed when
+                            experienced investment platform, Topedges is built on the principle that we succeed when
                             our investors succeed
 
                         </p>
@@ -61,7 +61,7 @@
                         <img src="{{ asset('assets/img/landing/clipboard2-data-fill.svg') }}" alt="">
                         <h3>Break Your Own Investment Records</h3>
                         <p>
-                            With Resoprime, You can make a lot from investments. You can make even more as many times as
+                            With Topedges, You can make a lot from investments. You can make even more as many times as
                             you like, setting a good record and breaking your own records.
                         </p>
                     </div>
@@ -101,14 +101,14 @@
                         <span>
                             2
                         </span>
-                        <h3>Link your wallet </h3>
+                        <h3>Deposit</h3>
                         <p>Add funds securely to your account to start your investment journey.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="landing-feature-item text-left">
                         <img src="{{ asset('assets/img/landing/trade.svg') }}" alt="">
-                        <h3>Mine & Earn</h3>
+                        <h3>Earn</h3>
                         <p>Choose your investment options and start growing your assets with confidence.</p>
                         <span>3</span>
                     </div>
