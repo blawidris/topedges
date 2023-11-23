@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
+
+@section('pageTitle', 'OTP verification')
 
 @section('content')
 <div class="container">

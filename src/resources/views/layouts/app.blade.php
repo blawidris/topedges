@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-md shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('assets/img/logo-light.png') }}" width="150" alt="{{ config('app.name') }}">
+                    <img src="{{ asset('assets/img/logo.svg') }}" width="120" alt="{{ config('app.name') }}">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

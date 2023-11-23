@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="text-right">
-                        <a href="reset-password-dark.html" class="text-white" style="font-size: 14px; font-weight:normal">Forgot Password?</a>
+                        <a href="{{route('password.request')}}" class="text-white" style="font-size: 14px; font-weight:normal">Forgot Password?</a>
                     </div>
                 </div>
 

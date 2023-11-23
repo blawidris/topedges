@@ -2,15 +2,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2 align-items-start d-flex flex-column">
-                <a href="{{ url('/') }}">
-                    <img src="{{ asset('assets/img/logo-light.png') }}" alt="">
+                <a href="{{ url('/') }}" class="mb-4">
+                    <img src="{{ asset('assets/img/logo.svg') }}" alt="{{config('app.name')}}" width="120">
                 </a>
                 <address>
                     Utoquai 29 8007 Zürich, Switzerland 
                 </address>
             </div>
-            <div class="col-md-10 d-flex justify-content-end align-items-center">
-                <div class="d-flex w-full flex-wrap">
+            <div class="col-md-10 d-flex justify-content-md-end align-items-md-center">
+                <div class="d-flex w-full">
                     <ul>
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ url('/about-us') }}">About</a></li>

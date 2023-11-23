@@ -1113,10 +1113,6 @@ header .nav-link.btn {
 }
 
 
-footer.landing-footer img {
-    width: 80px;
-}
-
 footer.landing-footer ul li {
     display: block;
 }
@@ -2836,7 +2832,8 @@ tbody.ob-heading {
     }
 
     footer.landing-footer .d-flex {
-        display: block !important;
+        display: flex !important;
+        align-items: start;
     }
 
     .settings-profile .custom-file {

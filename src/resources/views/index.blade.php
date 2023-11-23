@@ -136,7 +136,7 @@
                         cryptocurrency buying, selling, and trading.
                     </p>
                     <div class="d-inline-flex align-items-center">
-                        <a href="/about" class="btn btn-primary btn-rounded px-6 py-2">Learn more</a>
+                        <a href="{{route('about')}}" class="btn btn-primary btn-rounded px-6 py-2">Learn more</a>
                         <a href="javascript:void(0)" class="btn btn-secondary btn-rounded px-6 py-2 ml-3"
                             id="showVideoBtn">Watch
                             <i class="bi bi-play-fill ml-3 text-primary fs-20"></i></a>

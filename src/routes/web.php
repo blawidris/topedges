@@ -31,8 +31,8 @@ Route::get('/markets', [PagesController::class, 'markets']);
 
 Route::get('/market-crypto', [PagesController::class, 'market-crypto']);
 
-Route::get('/faqs', [PagesController::class, 'faqs']);
-Route::get('/about-us', [PagesController::class, 'aboutus']);
+Route::get('/faqs', [PagesController::class, 'faqs'])->name('faq');
+Route::get('/about-us', [PagesController::class, 'aboutus'])->name('about');
 
 Route::get('/terms-condition', [PagesController::class, 'terms']);
 

@@ -1,321 +1,115 @@
 @extends('layouts.frontend')
 
+@section('pageTitle', 'About us')
+
 @section('content')
     <div class="page-area">
+
+        <section class="landing-info-one landing-info-one-bg mtb100">
+            <div class="container">
+                <div class="row flex-row-reverse align-items-center">
+                    <div class="col-md-7">
+                        <h6>About Us</h6>
+                        <h2>Who we are</h2>
+                        <p>
+                            Welcome to our crypto investment platform, where we're committed to helping investors reach
+                            their financial aspirations through the power of blockchain tech and digital assets. We're firm
+                            believers in the transformative potential of cryptocurrencies for the financial sector, aiming
+                            to usher in a more decentralized and transparent future.
+                        </p>
+                        <p>
+                            As passionate advocates for the democratization of finance, we recognize that the impact of
+                            blockchain transcends traditional boundaries. It signifies a seismic shift in the way financial
+                            systems operate, offering individuals a gateway to financial empowerment. Our platform serves as
+                            a conduit for this transformative force, providing users not only with the means to invest but
+                            also an opportunity to actively participate in shaping the future of decentralized finance.
+                        </p>
+
+                    </div>
+                    <div class="col-md-5">
+                        <img src="{{ asset('assets/img/landing/man-trade.png') }}" alt="About us">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="landing-feature" style="border-bottom: 1px solid #2a2e39">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="landing-feature-item">
+                            <h3>Our Vision</h3>
+                            <p>
+                                Pioneering a financial landscape where the power of blockchain fosters inclusivity and
+                                economic empowerment, creating a borderless and equitable digital economy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="landing-feature-item">
+                            <h3>Our Mission </h3>
+                            <p>
+                                Demystifying crypto investing for everyone, from novices to seasoned traders, by providing a
+                                user-friendly platform that seamlessly facilitates cryptocurrency buying, selling, and
+                                trading.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="landing-feature-item">
+                            <h3>Our Value </h3>
+                            <p>
+                                Driven by integrity, innovation, and inclusivity, we prioritize user experience, security,
+                                and education to build trust and foster a thriving crypto community.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="landing-info-one landing-info-one-bg mtb100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <h2>Our History</h2>
+                        <p>
+                            Founded on the principles of transparency and accessibility, our journey began with a vision to
+                            revolutionize traditional finance through blockchain innovation. Over the years, we have evolved
+                            into a trusted platform, making crypto investing accessible to all. Our commitment to
+                            user-friendly interfaces and cutting-edge technology has positioned us as a leader in the
+                            industry. Through market fluctuations and technological advancements, we have adapted and grown,
+                            continuously refining our services to meet the evolving needs of our diverse user base. Our
+                            history is marked by milestones of empowering individuals to navigate the crypto landscape with
+                            confidence, contributing to the ongoing narrative of a decentralized and transparent financial
+                            future.
+                        </p>
+                        <p>
+                            As we reflect on our journey, we acknowledge that our success is intrinsically tied to the
+                            vibrant community of users who have joined us along the way. Their feedback and engagement have
+                            been invaluable in shaping our platform. We have fostered a culture of collaboration, where the
+                            voices of our users contribute to the ongoing evolution of our services. Beyond the numbers and
+                            transactions, our story is woven with the experiences of individuals who have found in us not
+                            just a platform, but a partner in their financial aspirations. Looking ahead, we are committed
+                            to sustaining this collaborative spirit, ensuring that our users continue to play a central role
+                            in the narrative of our growth and development. Together, we are not just witnessing the rise of
+                            a decentralized and transparent financial future but actively contributing to its realization.
+
+                    </div>
+                    <div class="col-md-5">
+                        <img src="{{ asset('assets/img/landing/man-trade.png') }}" alt="Our History">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <div id="post-168" class="post-168 page type-page status-publish hentry">
 
             <div class="entry-content">
                 <div data-elementor-type="wp-page" data-elementor-id="168" class="elementor elementor-168">
-                    <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-519047c elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-                        data-id="519047c" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-no">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-597e25e"
-                                data-id="597e25e" data-element_type="column">
-                                <div class="elementor-widget-wrap elementor-element-populated">
-                                    <div class="elementor-element elementor-element-a6f03d5 elementor-widget elementor-widget-Bern_Overview"
-                                        data-id="a6f03d5" data-element_type="widget"
-                                        data-widget_type="Bern_Overview.default">
-                                        <div class="elementor-widget-container">
-
-
-                                            <div class=" overview-area ptb-100 ">
-                                                <div class="container">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-6 col-md-12 aos-init aos-animate"
-                                                            data-aos="fade-up" data-aos-duration="1000"
-                                                            data-aos-delay="100">
-                                                            <div class="overview-image text-center position-relative">
-                                                                <img decoding="async"
-                                                                    src="https://themes.envytheme.com/bern/wp-content/uploads/2023/04/black-globe.png"
-                                                                    alt="images">
-                                                                <img decoding="async"
-                                                                    src="https://themes.envytheme.com/bern/wp-content/uploads/2023/04/overview1.webp"
-                                                                    alt="image">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-12 aos-init aos-animate"
-                                                            data-aos="fade-in" data-aos-duration="1000"
-                                                            data-aos-delay="200">
-                                                            <div class="overview-content ">
-                                                                <h2>
-                                                                    Not going anywhere, We are here! </h2>
-                                                                <ul class="features-list list-unstyled mb-0">
-                                                                    <li class="position-relative">
-                                                                        <i class="flaticon-check"></i>
-                                                                        <h3>Full Trade Lifecycle</h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                    <li class="position-relative">
-                                                                        <i class="flaticon-check"></i>
-                                                                        <h3>A Range of Powerful APIS</h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                    <li class="position-relative">
-                                                                        <i class="flaticon-check"></i>
-                                                                        <h3>Dedicated Support</h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-7a0205d elementor-section-full_width pt-0 elementor-section-height-default elementor-section-height-default"
-                        data-id="7a0205d" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-no">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c53b63e"
-                                data-id="c53b63e" data-element_type="column">
-                                <div class="elementor-widget-wrap elementor-element-populated">
-                                    <div class="elementor-element elementor-element-653c75b elementor-widget elementor-widget-Bern_Overview"
-                                        data-id="653c75b" data-element_type="widget"
-                                        data-widget_type="Bern_Overview.default">
-                                        <div class="elementor-widget-container">
-
-
-                                            <div class=" overview-area ptb-100 ">
-                                                <div class="container">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-6 col-md-12 order-1 order-lg-2 aos-init"
-                                                            data-aos="fade-in" data-aos-duration="1000"
-                                                            data-aos-delay="100">
-                                                            <div class="overview-content ">
-                                                                <h2>
-                                                                    Our history </h2>
-                                                                <ul class="features-list list-unstyled mb-0">
-                                                                    <li class="position-relative">
-                                                                        <i class="flaticon-check"></i>
-                                                                        <h3>Use Your Credit or Debit Card</h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                    <li class="position-relative">
-                                                                        <i class="flaticon-check"></i>
-                                                                        <h3>Available Everywhere</h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                    <li class="position-relative">
-                                                                        <i class="flaticon-check"></i>
-                                                                        <h3>Cash Out in Seconds</h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-12 order-1 order-lg-2 aos-init"
-                                                            data-aos="fade-up" data-aos-duration="1000"
-                                                            data-aos-delay="200">
-                                                            <div class="overview-image text-center position-relative">
-                                                                <img decoding="async"
-                                                                    src="https://themes.envytheme.com/bern/wp-content/uploads/2023/04/black-globe.png"
-                                                                    alt="images">
-                                                                <img decoding="async"
-                                                                    src="https://themes.envytheme.com/bern/wp-content/uploads/2023/04/overview2.webp"
-                                                                    alt="image">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-6d61b94 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-                        data-id="6d61b94" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-no">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0f31a13"
-                                data-id="0f31a13" data-element_type="column">
-                                <div class="elementor-widget-wrap elementor-element-populated">
-                                    <div class="elementor-element elementor-element-da7e2f7 elementor-widget elementor-widget-Features"
-                                        data-id="da7e2f7" data-element_type="widget" data-widget_type="Features.default">
-                                        <div class="elementor-widget-container">
-
-                                            <div class=" features-area position-relative pb-100 ">
-                                                <div class="container">
-                                                    <div class=" features-inner-area ">
-                                                        <div class="row justify-content-center">
-                                                            <div class="col-lg-4 col-md-6 col-sm-6 aos-init"
-                                                                data-aos="fade-in" data-aos-duration="1000"
-                                                                data-aos-delay="100">
-                                                                <div class="single-features-box">
-                                                                    <div class="icon">
-                                                                        <i class="flaticon-trade"></i>
-                                                                    </div>
-                                                                    <h3>Our vision</h3>
-                                                                    <ul class="list-unstyled mb-0">
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i>Intuitive
-                                                                            interface</li>
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i> Instant
-                                                                            deposit options</li>
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i> Cash out
-                                                                            directly to your bank account</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4 col-md-6 col-sm-6 aos-init"
-                                                                data-aos="fade-in" data-aos-duration="1000"
-                                                                data-aos-delay="200">
-                                                                <div class="single-features-box">
-                                                                    <div class="icon">
-                                                                        <i class="flaticon-secure-shield"></i>
-                                                                    </div>
-                                                                    <h3>Our mision</h3>
-                                                                    <ul class="list-unstyled mb-0">
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i>100% of
-                                                                            assets stored safely offline</li>
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i> Highly
-                                                                            encrypted personal data</li>
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i>
-                                                                            Whitelisting and transaction confirmations</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4 col-md-6 col-sm-6 aos-init"
-                                                                data-aos="fade-in" data-aos-duration="1000"
-                                                                data-aos-delay="300">
-                                                                <div class="single-features-box">
-                                                                    <div class="icon">
-                                                                        <i class="flaticon-team"></i>
-                                                                    </div>
-                                                                    <h3>Our value</h3>
-                                                                    <ul class="list-unstyled mb-0">
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i>Exchanging
-                                                                            bitcoin since 2008</li>
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i> 24/7
-                                                                            dedicated support</li>
-                                                                        <li class="position-relative"><i
-                                                                                class="flaticon-check-mark"></i>
-                                                                            Industry-leading uptime</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-43a731f elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-                        data-id="43a731f" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-no">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b17eec6"
-                                data-id="b17eec6" data-element_type="column">
-                                <div class="elementor-widget-wrap elementor-element-populated">
-                                    <div class="elementor-element elementor-element-54473d2 elementor-widget elementor-widget-Bern_TradingTools"
-                                        data-id="54473d2" data-element_type="widget"
-                                        data-widget_type="Bern_TradingTools.default">
-                                        <div class="elementor-widget-container">
-
-                                            <div class="trading-tools-area position-relative pb-100">
-                                                <div class="container">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-6 col-md-12 aos-init" data-aos="fade-in"
-                                                            data-aos-duration="1000" data-aos-delay="100">
-                                                            <div class="trading-tools-content">
-                                                                <h2>
-                                                                    Start trading in 5 minutes </h2>
-                                                                <ul class="features-list list-unstyled mb-0">
-                                                                    <li class="position-relative">
-                                                                        <span class="number">1</span>
-                                                                        <h3>Sign up and download the Bern Trade mobile app
-                                                                        </h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                    <li class="position-relative">
-                                                                        <span class="number">2</span>
-                                                                        <h3>Connect your bank account to deposit funds</h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                    <li class="position-relative">
-                                                                        <span class="number">3</span>
-                                                                        <h3>Buy and sell stocks with $0 commission fees</h3>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit. Ut sed consectetur augue vitae
-                                                                            pulvinar in. Nisl euismod vitae turpis in. Leo
-                                                                            nec sed blandit velit. Dolor sed ipsum vitae
-                                                                            enim mi. Cursus tortor id est ac est.</p>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-12 aos-init" data-aos="fade-up"
-                                                            data-aos-duration="1000" data-aos-delay="100">
-                                                            <div class="trading-tools-image text-center">
-                                                                <img decoding="async"
-                                                                    src="https://themes.envytheme.com/bern/wp-content/uploads/2023/04/overview3.webp"
-                                                                    alt="image">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
 
                     <section
                         class="elementor-section elementor-top-section elementor-element elementor-element-240e29b elementor-section-full_width elementor-section-height-default elementor-section-height-default"
@@ -338,31 +132,27 @@
                                                                 <h2>
                                                                     Our best users are all over the world with wide coverage
                                                                 </h2>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                    Ut sed consectetur augue vitae pulvinar in. Nisl euismod
-                                                                    vitae turpis in. Leo nec sed blandit velit. Dolor sed
-                                                                    ipsum vitae enim mi cursus tortor id est ac est nunc.
-                                                                </p>
-                                                                <div class="row justify-content-center features-list">
-                                                                    <div class="col-4 aos-init" data-aos="fade-in"
+
+                                                                <div class="row justify-content-center features-list mt-4">
+                                                                    <div class="col-md-4 aos-init" data-aos="fade-in"
                                                                         data-aos-duration="1000" data-aos-delay="100">
-                                                                        <div class="box">
-                                                                            <h3>500+</h3>
+                                                                        <div class="box text-dark px-2">
+                                                                            <h3>100+</h3>
                                                                             <p>Worldwide Countries</p>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-4 aos-init" data-aos="fade-in"
+                                                                    <div class="col-md-4 aos-init" data-aos="fade-in"
                                                                         data-aos-duration="1000" data-aos-delay="200">
-                                                                        <div class="box">
-                                                                            <h3>103+</h3>
+                                                                        <div class="box text-dark px-2">
+                                                                            <h3>56+M</h3>
                                                                             <p>Happy Customers</p>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-4 aos-init" data-aos="fade-in"
+                                                                    <div class="col-md-4 aos-init" data-aos="fade-in"
                                                                         data-aos-duration="1000" data-aos-delay="300">
-                                                                        <div class="box">
-                                                                            <h3>1005+</h3>
-                                                                            <p>Registered Companies</p>
+                                                                        <div class="box text-dark px-2">
+                                                                            <h3>$657B</h3>
+                                                                            <p>1/3 Volume traded</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
