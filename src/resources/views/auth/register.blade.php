@@ -1,4 +1,7 @@
 @extends('layouts.frontend')
+
+@section('pageTitle', "Registration")
+
 @section('content')
     <div class="vh-100 d-flex justify-content-center">
         <div class="form-access my-auto">

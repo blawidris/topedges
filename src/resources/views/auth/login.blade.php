@@ -1,4 +1,7 @@
 @extends('layouts.frontend')
+
+@section('pageTitle', "Account Login")
+
 @section('content')
     <div class="vh-100 d-flex justify-content-center">
         <div class="form-access my-auto" style="width: 500px;">

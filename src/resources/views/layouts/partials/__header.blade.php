@@ -43,49 +43,13 @@
                     </li>
                     @endguest
 
-
-                    {{-- @auth
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('mine-now') }}" role="button" aria-haspopup="true"
-                                aria-expanded="false">
-                                Mining Wall
-                            </a>
-                        </li>
-                    @endauth --}}
-
-
-                    <!--li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  Dashboard
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="settings-profile-dark.html">Profile</a>
-                  <a class="dropdown-item" href="settings-wallet-dark.html">Wallet</a>
-                  <a class="dropdown-item" href="settings-dark.html">Settings</a>
-                </div>
-              </li--->
-
-                    <!--li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  Others
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="signin-dark.html">Sign in</a>
-                  <a class="dropdown-item" href="signup-dark.html">Sign up</a>
-                    <a href="about-us.html" class="dropdown-item">About Us</a>
-                    <a href="terms-condition.html" class="dropdown-item">Terms & Conditions</a>
-                </div>
-              </li-->
-
                 </ul>
                 @guest
                     <div class="navbar-nav ml-auto pr-5">
                         <a href="{{ url('/login') }}" class="border-bottom text-gray pb-1 fs-3">Login</a>
-
                     </div>
-                @else
+                    <div id="google_translate_element"></div>
+                    @else
                     <ul class="navbar-nav profile mr-5">
                         <li class="nav-item dropdown">
                             <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">

@@ -49,6 +49,17 @@
     </script>
     <!--End of Tawk.to Script-->
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async>
+    </script>
+
     {{-- <script src="//code.tidio.co/g3nwaizvhjp2gdt0uxl3j7ar9ua1bmuy.js" async></script> --}}
 
     {{-- <script src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script> --}}

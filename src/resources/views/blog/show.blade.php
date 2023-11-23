@@ -1,10 +1,12 @@
 @extends('layouts.frontend')
 
+@section('pageTitle', $blog->title)
+
 @section('content')
     <section class="py-50">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9 col-md-8">
+                <div class="col-lg-9 col-md-8 px-0">
                     <div class="blog-post mb-30">
                         <div class="entry-image clearfix">
                           <img src="{{asset('/'.$blog->image)}}" class="img-fluid"/>

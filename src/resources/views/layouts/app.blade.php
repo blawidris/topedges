@@ -91,7 +91,7 @@
     </div>
 
 
-     <script type="text/javascript">
+    <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date();
         (function() {
@@ -104,6 +104,19 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async>
+    </script>
+
 </body>
 
 </html>
