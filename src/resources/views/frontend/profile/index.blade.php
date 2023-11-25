@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
 
+@section('pageTitle', "Profile")
+
 @section('content')
     <div class="settings pt-5 py-60">
         <div class="container">

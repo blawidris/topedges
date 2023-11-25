@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
 
+@section('pageTitle', "KYC Verification")
+
 @section('content')
     <div class="settings pt-5">
         <div class="container">

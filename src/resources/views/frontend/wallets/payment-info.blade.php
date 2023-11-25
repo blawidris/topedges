@@ -1,4 +1,7 @@
 @extends('layouts.frontend')
+
+@section('pageTitle', '')
+
 @section('content')
     <div class="settings mtb15">
         <div class="container">

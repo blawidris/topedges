@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
 
+@section('pageTitle', "Edit Profile")
+
 @section('content')
     <div class="settings pt-5">
         <div class="container">
@@ -30,7 +32,7 @@
                                                         placeholder="Name" value="{{$user->f_name.' '.$user->l_name}}">
                                                 </div>
                                             </div>
-                                           
+
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="email" class="custom-label">Email Address</label>
@@ -73,7 +75,7 @@
                                                 <div class="form-group">
                                                     <label for="address">Address</label>
                                                     <input type="text" class="form-control" id="address" name="address"
-                                                        placeholder="Enter address" value="{{$user->address}}"> 
+                                                        placeholder="Enter address" value="{{$user->address}}">
                                                 </div>
                                             </div>
 
