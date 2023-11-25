@@ -5,11 +5,11 @@
 
 
 <head>
-    <title>Top Edges - @yield('pageTitle')</title>
+    <title>Topedges - @yield('pageTitle')</title>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="{{ asset('admin/media/logos/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ asset('admin/media/logos/favicon.png') }}" />
     <meta name="content" content="{{csrf_token()}}">
 
     <!--begin::Fonts(mandatory for all pages)-->
@@ -95,7 +95,7 @@
                     <!--begin::Mobile logo-->
                     <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                         <a href="{{ route('admin.dashboard') }}" class="d-lg-none">
-                            <img alt="Logo" src="{{ asset('admin/') }}/media/logos/default-small.svg')}}"
+                            <img alt="Logo" src="{{ asset('admin/') }}/media/logos/logo.svg')}}"
                                 class="h-30px" />
                         </a>
                     </div>
@@ -271,11 +271,11 @@
                     <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
                         <!--begin::Logo image-->
                         <a href="{{ route('admin.dashboard') }}">
-                            <img alt="Logo" src="{{ asset('admin/media/logos/default-dark.svg') }}"
-                                class="h-25px app-sidebar-logo-default" />
+                            <img alt="Logo" src="{{ asset('admin/media/logos/logo.svg') }}"
+                                class="h-25px app-sidebar-logo-default" width="120" />
 
-                            <img alt="Logo" src="{{ asset('admin/media/logos/default-small.svg') }}"
-                                class="h-20px app-sidebar-logo-minimize" />
+                            <img alt="Logo" src="{{ asset('admin/media/logos/logo.svg') }}"
+                                class="h-20px app-sidebar-logo-minimize" width="120"/>
                         </a>
                         <!--end::Logo image-->
 
@@ -358,21 +358,7 @@
                         <!--end::Menu wrapper-->
                     </div>
                     <!--end::sidebar menu-->
-                    <!--begin::Footer-->
-                    <div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
-                        <a href="https://preview.keenthemes.com/html/metronic/docs"
-                            class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click"
-                            title="200+ in-house components and 3rd-party plugins">
-
-                            <span class="btn-label">
-                                Docs & Components
-                            </span>
-
-                            <i class="ki-duotone ki-document btn-icon fs-2 m-0"><span class="path1"></span><span
-                                    class="path2"></span></i> </a>
-                    </div>
-                    <!--end::Footer-->
+                   
                 </div>
                 <!--end::Sidebar-->
 

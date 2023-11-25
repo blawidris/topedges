@@ -89,3 +89,22 @@
 2023/11/23 17:17:04 [notice] 1#1: start worker process 30
 2023/11/23 17:17:04 [notice] 1#1: start worker process 31
 2023/11/23 18:16:46 [error] 30#30: *124 upstream timed out (110: Operation timed out) while reading response header from upstream, client: 172.19.0.1, server: , request: "POST /email/resend HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost", referrer: "http://localhost/email/verify"
+2023/11/24 15:32:40 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/11/24 15:32:40 [notice] 30#30: gracefully shutting down
+2023/11/24 15:32:40 [notice] 29#29: gracefully shutting down
+2023/11/24 15:32:40 [notice] 29#29: exiting
+2023/11/24 15:32:40 [notice] 31#31: gracefully shutting down
+2023/11/24 15:32:40 [notice] 31#31: exiting
+2023/11/24 15:32:40 [notice] 28#28: gracefully shutting down
+2023/11/24 15:32:40 [notice] 30#30: exiting
+2023/11/24 15:32:40 [notice] 29#29: exit
+2023/11/24 15:32:40 [notice] 30#30: exit
+2023/11/24 15:32:40 [notice] 31#31: exit
+2023/11/24 15:32:40 [notice] 28#28: exiting
+2023/11/24 15:32:40 [notice] 28#28: exit
+2023/11/24 15:32:40 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2023/11/24 15:32:40 [notice] 1#1: worker process 28 exited with code 0
+2023/11/24 15:32:40 [notice] 1#1: worker process 29 exited with code 0
+2023/11/24 15:32:40 [notice] 1#1: worker process 30 exited with code 0
+2023/11/24 15:32:40 [notice] 1#1: worker process 31 exited with code 0
+2023/11/24 15:32:40 [notice] 1#1: exit

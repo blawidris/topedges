@@ -63,9 +63,9 @@
         <div class="d-flex flex-column flex-lg-row flex-column-fluid">
             <!--begin::Logo-->
             <a href="{{ route('admin.login') }}" class="d-block d-lg-none mx-auto py-20">
-                <img alt="Logo" src="{{ asset('admin/media/logos/default.svg') }}"
+                <img alt="Logo" src="{{ asset('admin/media/logos/logo.svg') }}"
                     class="theme-light-show h-25px" />
-                <img alt="Logo" src="{{ asset('admin/media/logos/default-dark.svg') }}"
+                <img alt="Logo" src="{{ asset('admin/media/logos/logo.svg') }}"
                     class="theme-dark-show h-25px" />
             </a>
             <!--end::Logo-->
