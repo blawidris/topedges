@@ -55,7 +55,7 @@
                             <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                                 <div class="navbar-profile">
                                     <img class="img-xs rounded-circle"
-                                        src="{{Auth::user()->image ? asset('storage/users/'.Auth::user()->image ) : 'https://via.placeholder.com/50'}}"
+                                        src="{{Auth::user()->image ? asset('/storage/users/'.Auth::user()->image ) : 'https://via.placeholder.com/50'}}"
                                         alt="" width="50">
                                     <p class="mb-0 d-sm-block navbar-profile-name">${{Auth::user()->wallet->current_balance ?? 0}}</p>
                                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
