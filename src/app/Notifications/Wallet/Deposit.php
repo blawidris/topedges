@@ -47,7 +47,7 @@ class Deposit extends Notification
         return (new MailMessage)
             ->subject('Deposit')
             ->greeting('Dear ' . ucfirst($user->f_name) . ' ,')
-            ->line("We are writing to inform you that your recent deposit of {$trans->price_amount} USD failed to process.")
+            ->line("We are writing to inform you that your recent deposit of {$trans->price_amount} USD with reference no: $trans->payment_id failed to process.")
             ->line('We apologize for any inconvenience this may cause.')
             ->line("To resolve this issue, please contact our customer support team using the live chat feature on our website. Our team will be able to assist you in completing your deposit.")
             ->line('Thank you for your understanding.');
