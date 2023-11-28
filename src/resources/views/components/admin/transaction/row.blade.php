@@ -5,6 +5,9 @@
          </div>
      </td>
      <td>
+         <a href="#" class="text-gray-800 text-hover-primary mb-1">
+             #{{ $trans->payment_id }}</a>
+     </td><td>
          <a href="#" class="text-gray-800 text-hover-primary mb-1">{{ $trans->user->f_name }}
              {{ $trans->user->l_name }}</a>
      </td>
@@ -19,7 +22,7 @@
          <span class="badge badge-{{ $trans->status == 1 ? 'success' : 'warning' }} text-capitalize">{{ $trans->status == 1 ? 'success' : 'warning' }}</span>
      </td>
      <td data-order="2020-12-14T20:43:00-05:00 {{ date('Y-m-dTH:i:s', strtotime($trans->created_at)) }}">
-         {{ date('j M, Y H:i a', strtotime($trans->created_at)) }}
+         {{ date('j M, Y', strtotime($trans->created_at)) }}
      </td>
      <td class="text-end">
          <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary"

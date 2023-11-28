@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Transaction;
+use App\Models\User;
 use App\Models\Wallet;
+use App\Notifications\Wallet\DepositApproval;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -46,27 +48,32 @@ class WalletController extends Controller
             return response()->json(['message' => 'Transaction not found',], 404);
         }
 
+        $price = $trans->price_amount;
+
         //  content
         $trans->update([
             'status' => 1
         ]);
 
+        $user = User::where('id', $customer)->first();
+        // notify user
+        $user->notify(new DepositApproval($trans));
+
+
         // update wallet
         $wallet = Wallet::where('user_id', $customer)->first();
 
-        $current_balance =  $wallet->current_balance;
+        $current_balance =  $wallet->current_balance ?? 0;
 
-        $newBalance = $current_balance + $trans->price_amount;
+        $newBalance = $current_balance + $price;
 
         $wallet->update([
             'current_balance' => $newBalance
         ]);
 
-        // notify user
-
-        if($wallet->type=='withdraw'){
+        // if($wallet->type=='withdraw'){
             // Mail::to()->send(new )
-        }
+        // }
 
         return response()->json(['message' => 'Transaction approve', 'status' => 200, 'current_balance' => $wallet->current_balance], 200);
     }

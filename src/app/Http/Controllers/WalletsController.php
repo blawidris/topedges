@@ -9,6 +9,8 @@ use App\Mail\Withdraw;
 use App\Models\ReferalTracker;
 use App\Models\Wallet;
 use App\Models\Transaction;
+use App\Models\User;
+use App\Notifications\Wallet\Deposit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -89,13 +91,13 @@ class WalletsController extends Controller
             'response' => Transaction::where('user_id', Auth::user()->id)->first()
         ];
 
-        // dd($data['response']);
-
         return view('frontend.wallets.payment-info', $data);
     }
 
-    public function deposit(Transaction $trans, Request $request)
-    {
+    public function deposit(
+        Request $request,
+        Transaction $trans
+    ) {
 
         $validator = Validator::make($request->all(), [
             'amount' => 'required|numeric'
@@ -113,7 +115,7 @@ class WalletsController extends Controller
             "user_id" => $request->user_id,
             "payment_id" => rand(1111111, 9999999),
             "payment_status" => "waiting",
-            "pay_address" => "3EZ2uTdVDAMFXTfc6uLDDKR6o8qKBZXVkj",
+            "pay_address" => "",
             "price_amount" => $request->amount,
             "price_currency" => "usd",
             "pay_amount" => $request->pay_amount,
@@ -138,7 +140,11 @@ class WalletsController extends Controller
         // send email to admin
         Mail::to('elisamargaret0202@gmail.com')->send(new NotifyAdmin($trans));
 
-        return back()->with(['status' => 'info', 'message' => 'Payment Initialise']);
+        // notify user on deposit
+        $user = User::where('id', Auth::user()->id)->first();
+        $user->notify(new Deposit($trans));
+
+        return back()->with(['status' => 'warning', 'message' => 'Payment failed']);
     }
 
     function updateDeposit(Transaction $trans, Request $request)

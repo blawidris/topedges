@@ -71,7 +71,7 @@ var KTSigninGeneral = (function () {
                             method: "POST",
                             headers:{
                                 "X-CSRF-TOKEN": _token,
-                                // "accept": "application/json",
+                                "accept": "application/json",
                                 // 'Content-Type': "application/json"
                             },
                             body: formData

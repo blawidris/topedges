@@ -100,20 +100,14 @@
                                                 <!--begin::Details content-->
                                                 <div id="kt_customer_view_details" class="collapse show">
                                                     <div class="py-5 fs-6">
-                                                        <!--begin::Badge-->
-                                                        {{-- <div class="badge badge-light-info d-inline">Premium user</div> --}}
-                                                        <!--begin::Badge-->
 
-                                                        <!--begin::Details item-->
-                                                        <div class="fw-bold mt-5">Account ID</div>
-                                                        <div class="text-gray-600">ID-{{$user->id}}</div>
-                                                        <!--begin::Details item-->
                                                         <!--begin::Details item-->
                                                         <div class="fw-bold mt-5">Email</div>
                                                         <div class="text-gray-600"><a href="#"
                                                                 class="text-gray-600 text-hover-primary">{{$user->email}}</a>
                                                         </div>
                                                         <!--begin::Details item-->
+
                                                         <!--begin::Details item-->
                                                         <div class="fw-bold mt-5">Address</div>
                                                         <div class="text-gray-600">{{$user->address}}, {{$user->city}} {{$user->state}}, {{$user->country}}</div>
@@ -140,22 +134,6 @@
                                                 <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab"
                                                     href="#kt_customer_view_overview_tab">Overview</a>
                                             </li>
-                                            <!--end:::Tab item-->
-
-                                            <!--begin:::Tab item-->
-                                            {{-- <li class="nav-item">
-                                                <a class="nav-link text-active-primary pb-4" data-bs-toggle="tab"
-                                                    href="#kt_customer_view_overview_events_and_logs_tab">Events &
-                                                    Logs</a>
-                                            </li> --}}
-                                            <!--end:::Tab item-->
-
-                                            <!--begin:::Tab item-->
-                                            {{-- <li class="nav-item">
-                                                <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true"
-                                                    data-bs-toggle="tab"
-                                                    href="#kt_customer_view_overview_statements">Statements</a>
-                                            </li> --}}
                                             <!--end:::Tab item-->
 
                                             <!--begin:::Tab item-->

@@ -15,7 +15,7 @@
                     <div class="d-flex align-items-center position-relative my-1">
                         <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-5"><span class="path1"></span><span
                                 class="path2"></span></i> <input type="text" data-kt-customer-table-filter="search"
-                            class="form-control form-control-solid w-250px ps-12" placeholder="Search Customers">
+                            class="form-control form-control-solid w-250px ps-12" placeholder="Search transaction">
                     </div>
                     <!--end::Search-->
                 </div>
@@ -85,7 +85,7 @@
                                 <!--begin::Input group-->
                                 <div class="mb-10">
                                     <!--begin::Label-->
-                                    <label class="form-label fs-5 fw-semibold mb-3">Payment Type:</label>
+                                    <label class="form-label fs-5 fw-semibold mb-3">Transaction Type:</label>
                                     <!--end::Label-->
 
                                     <!--begin::Options-->
@@ -106,9 +106,9 @@
                                         <label
                                             class="form-check form-check-sm form-check-custom form-check-solid mb-3 me-5">
                                             <input class="form-check-input" type="radio" name="payment_type"
-                                                value="visa">
+                                                value="deposit">
                                             <span class="form-check-label text-gray-600">
-                                                Visa
+                                                Deposit
                                             </span>
                                         </label>
                                         <!--end::Option-->
@@ -118,17 +118,7 @@
                                             <input class="form-check-input" type="radio" name="payment_type"
                                                 value="mastercard">
                                             <span class="form-check-label text-gray-600">
-                                                Mastercard
-                                            </span>
-                                        </label>
-                                        <!--end::Option-->
-
-                                        <!--begin::Option-->
-                                        <label class="form-check form-check-sm form-check-custom form-check-solid">
-                                            <input class="form-check-input" type="radio" name="payment_type"
-                                                value="american_express">
-                                            <span class="form-check-label text-gray-600">
-                                                American Express
+                                                Withdraw
                                             </span>
                                         </label>
                                         <!--end::Option-->
@@ -158,13 +148,6 @@
                                     class="path2"></span></i> Export
                         </button>
                         <!--end::Export-->
-
-                        <!--begin::Add customer-->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#kt_modal_add_customer">
-                            Add Customer
-                        </button>
-                        <!--end::Add customer-->
                     </div>
                     <!--end::Toolbar-->
 
@@ -207,6 +190,10 @@
                                                 value="1">
                                         </div>
                                     </th>
+                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table"
+                                        rowspan="1" colspan="1"
+                                        aria-label="Customer Name: activate to sort column ascending"
+                                        style="width: 166.6px;">Reference no.</th>
                                     <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table"
                                         rowspan="1" colspan="1"
                                         aria-label="Customer Name: activate to sort column ascending"

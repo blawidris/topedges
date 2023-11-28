@@ -51,6 +51,12 @@
                                             </a>
                                         @endif
 
+                                         @if ($user->userkyc->status == 1 && $user->status == 1)
+                                            <a href="{{ route('wallet') }}"
+                                                class="btn btn-outline-light btn-rounded get-started-btn">
+                                                Deposit Fund
+                                            </a>
+                                        @endif
 
                                     </span>
                                 </div>
