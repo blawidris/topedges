@@ -1,5 +1,10 @@
+/src/.env
+/src/.env.example
 /src/vendor
 /src/node_modules
 /**/*.md
 /**/.gitattributes
 /**/.gitignore
+/public/storage
+/public/storage/*.key
+/storage/app/public/**

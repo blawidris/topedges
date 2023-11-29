@@ -23,10 +23,10 @@ class Controller extends BaseController
 
             // create new name file
             $fileName = $this->generate_random_strings(5) . '_' .  time() .  '.' . $fileExt;
-            $filePath = 'public/' . $data->dir;
+            // $filePath = $data->dir;
 
-            if ($file->storeAs($filePath, $fileName)) {
-                return "$filePath/$fileName";
+            if ($file->storeAs($data->dir, $fileName)) {
+                return "{$data->dir}/$fileName";
             }
         }
     }

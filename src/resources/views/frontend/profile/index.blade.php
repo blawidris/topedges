@@ -15,8 +15,8 @@
                                 <div class="col-lg-5">
                                     <div class="border-bottom text-left pb-4">
                                         <div class="d-flex align-items-start gap-2">
-                                            <img src="{{ asset($user->image ? 'storage/users/' . $user->image : 'https://via.placeholder.com/50') }}"
-                                                alt="profile" class="img-lg rounded-circle mb-3" width="30">
+                                            <img src="{{ $user->image ? asset('storage/' . $user->image)  : 'https://via.placeholder.com/50' }}"
+                                                alt="profile" class="img-lg rounded-circle mb-3" width="60">
                                             <div class="ml-3 text-left">
                                                 <h3 class="text-white mb-0">
                                                     {{ ucfirst($user->f_name) . ' ' . ucfirst($user->l_name) }}

@@ -141,7 +141,7 @@ class UsersController extends Controller
                 'image' => 'image|mimes:jpg,jpeg,png,webp|max:2048'
             ]);
 
-            $request->dir = 'users/';
+            $request->dir = 'users';
 
             // remove existing image
             $user = User::where('id', $request->user_id)->first();
@@ -201,7 +201,7 @@ class UsersController extends Controller
         }
 
         // image upload
-        $request->dir = 'userskyc/';
+        $request->dir = 'userskyc';
         $newImage = $this->uploadImage($request);
 
         $data = [
