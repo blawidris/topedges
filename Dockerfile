@@ -38,7 +38,7 @@ RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
 
 # Copy env.production to env  
-COPY .env.production .env
+COPY ./.env.production ./.env
 
 # Image config
 ENV SKIP_COMPOSER 1
