@@ -7,13 +7,6 @@
         <div class="container">
 
             <div class="row justify-content-center">
-                {{-- <div class="col-md-12 col-lg-3">
-                <div class="nav flex-column nav-pills settings-nav" id="v-pills-tab">
-                  <a class="nav-link active" href="{{url('/profile')}}"><i class="icon ion-md-person"></i> Profile</a>
-                  <a class="nav-link" id="settings-wallet-tab" href="{{url('/wallet')}}"><i class="icon ion-md-wallet"></i> Wallet</a>
-                  <a class="nav-link " id="settings-tab" href="{{url('/settings')}}"><i class="icon ion-md-settings"></i> Settings</a>
-                </div>
-              </div> --}}
 
                 <div class="col-md-12 col-lg-10">
                     <div class="card">
@@ -31,7 +24,7 @@
                                                 <div class="d-flex align-items-center">
                                                     <span class="mb-0 me-2 text-muted">{{ ucfirst($user->country) }}</span>
                                                 </div>
-                                                <a class="badge badge-primary mt-2"
+                                                <a class="badge badge-primary mt-2 cursor-pointer"
                                                     onclick="location.href='{{ route('edit-profile') }}'">Edit
                                                     Profile</a>
                                             </div>
@@ -63,21 +56,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-lg-7">
-                                    <div class="py-2">
 
-                                        <ul class="nav nav-pills profile-navbar" role="tablist"
-                                            aria-orientation="horizontal">
-
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-toggle="pill" href="#recentActivity"
-                                                    role="tab" aria-selected="true">
-                                                    <i class="mdi mdi-newspaper"></i> Recent Activities</a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

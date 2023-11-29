@@ -23,11 +23,12 @@ class Controller extends BaseController
 
             // create new name file
             $fileName = $this->generate_random_strings(5) . '_' .  time() .  '.' . $fileExt;
+            $filePath = 'public/' . $data->dir;
 
-            if ($file->storeAs('public/' . $data->dir, $fileName)) {
-                return $fileName;
+            if ($file->storeAs($filePath, $fileName)) {
+                return "$filePath/$fileName";
             }
-        } 
+        }
     }
 
     public function generate_random_number($length)
@@ -55,5 +56,5 @@ class Controller extends BaseController
         return $newString;
     }
 
-   
+
 }
