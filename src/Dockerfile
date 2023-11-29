@@ -1,7 +1,7 @@
 FROM richarvey/nginx-php-fpm:2.0.0
 
 # Copy composer.lock and composer.json
-COPY . .
+COPY ./src /var/www/html/
 
 # Set working directory
 WORKDIR /var/www/html
