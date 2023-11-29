@@ -1,5 +1,5 @@
-/src/.env
 /src/.env.example
+/src/.env.production
 /src/vendor
 /src/node_modules
 /**/*.md
@@ -8,3 +8,7 @@
 /public/storage
 /public/storage/*.key
 /storage/app/public/**
+
+/src/Dockerfile
+/src/.dockerignore
+/src/conf

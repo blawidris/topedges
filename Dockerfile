@@ -1,4 +1,4 @@
-FROM richarvey/nginx-php-fpm:2.0.0
+FROM php:8.1-fpm
 
 # Copy composer.lock and composer.json
 COPY ./src/composer.lock ./src/composer.json /var/www/html/
@@ -37,23 +37,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
 
-# Copy env.production to env  
-COPY .env.production .env
-
-# Image config
-ENV SKIP_COMPOSER 1
-ENV WEBROOT /var/www/html/public
-ENV PHP_ERRORS_STDERR 1
-ENV RUN_SCRIPTS 1
-ENV REAL_IP_HEADER 1
-
-# Laravel config
-ENV APP_ENV staging
-ENV APP_DEBUG true
-ENV LOG_CHANNEL stderr
-
-# Allow composer to run as root
-ENV COMPOSER_ALLOW_SUPERUSER 1
 
 # Set ownership and permissions
 RUN chown -R www:www /var/www/html \
