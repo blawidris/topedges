@@ -168,6 +168,8 @@ var KTModalAdjustBalance = (function () {
                                             // Reset form for demo purposes only
                                             form.reset();
                                             newBalance.innerHTML = "--";
+
+                                            location.reload()
                                         }
                                     });
                                 })

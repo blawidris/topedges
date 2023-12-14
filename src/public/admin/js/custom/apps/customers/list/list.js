@@ -149,6 +149,7 @@ var KTCustomersList = (function () {
                             }).then(function () {
                                 // Remove current row
                                 datatable.row($(parent)).remove().draw();
+                                location.reload()
                             });
                         });
                     } else if (result.dismiss === "cancel") {

@@ -18,7 +18,8 @@ class WalletController extends Controller
         $this->middleware('admin');
     }
 
-    public function index(){
+    public function index()
+    {
 
         $data = [
             'transactions' => Transaction::orderBy('created_at', 'desc')->get()
@@ -43,9 +44,14 @@ class WalletController extends Controller
     public function approve($customer, $wallet)
     {
         $trans = Transaction::where(['user_id' => $customer, 'id' => $wallet])->first();
+        $user = User::where('id', $customer)->first();
 
         if (!$trans) {
-            return response()->json(['message' => 'Transaction not found',], 404);
+            return response()->json(['message' => 'Transaction not found', 'status' => 400,], 404);
+        }
+
+        if ($trans->status) {
+            return response()->json(['message' => 'Transaction already approved','status' => 400,], 400);
         }
 
         $price = $trans->price_amount;
@@ -55,7 +61,6 @@ class WalletController extends Controller
             'status' => 1
         ]);
 
-        $user = User::where('id', $customer)->first();
         // notify user
         $user->notify(new DepositApproval($trans));
 
@@ -63,17 +68,26 @@ class WalletController extends Controller
         // update wallet
         $wallet = Wallet::where('user_id', $customer)->first();
 
-        $current_balance =  $wallet->current_balance ?? 0;
+        $current_balance = 0;
 
-        $newBalance = $current_balance + $price;
+        if ($wallet) {
 
-        $wallet->update([
-            'current_balance' => $newBalance
+            $current_balance =  $wallet->current_balance;
+            $newBalance = $current_balance + $price;
+
+            $wallet->update([
+                'current_balance' => $newBalance
+            ]);
+
+            return response()->json(['message' => 'Transaction approve', 'status' => 200, 'current_balance' => $wallet->current_balance], 200);
+        }
+
+        $wallet =  Wallet::create([
+            'user_id' => $customer,
+            'current_balance' => $price,
+            'daily_earning' => 0,
+            'next_mine_date' => now()->addDays(1)
         ]);
-
-        // if($wallet->type=='withdraw'){
-            // Mail::to()->send(new )
-        // }
 
         return response()->json(['message' => 'Transaction approve', 'status' => 200, 'current_balance' => $wallet->current_balance], 200);
     }

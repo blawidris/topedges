@@ -105,7 +105,8 @@ class UserController extends Controller
         // dd($amount);
 
         $wallet->update([
-            'current_balance' => $newbalance
+            'current_balance' => $newbalance,
+            'daily_earning' => $amount
         ]);
 
         return response()->json(['message' => 'Wallet balance updated'], 204);
