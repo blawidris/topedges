@@ -90,10 +90,8 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="country">Country</label>
-                                                    <select class="form-control" name="country" id="country">
-                                                        <option value="nigeria" selected>Nigeria</option>
-                                                        {{-- <option>Female</option> --}}
-                                                    </select>
+                                                   <input type="text" class="form-control" id="state" name="country"
+                                                        placeholder="Enter country" value="{{$user->country}}">
                                                 </div>
                                             </div>
                                         </div>

@@ -153,19 +153,18 @@
                         <input type="hidden" name="pay_amount" class="pay_amount">
                         <input type="hidden" name="pay_currency_type" class="pay_currency_type">
                         <div class="form-group">
-                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                            <label class="sr-only" for="inlineFormInputGroup">Deposit Fund</label>
                             <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="mdi mdi-currency-usd"></i></div>
-                                </div>
-                                <input type="text" id="amount" name="amount" class="form-control"
-                                    placeholder="Enter amount">
-
                                 <select name="currency" id="" class="form-select form-control currency">
                                     <option value="">Select Currency</option>
                                     <option value="btc">BTC</option>
                                     <option value="usdt">USDT</option>
                                 </select>
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="mdi mdi-currency-usd"></i></div>
+                                </div>
+                                <input type="text" id="amount" name="amount" class="form-control"
+                                    placeholder="Enter amount">
                             </div>
                         </div>
                         <div class="usdt-value d-none align-items-center justify-content-between p-2">
@@ -197,22 +196,21 @@
                     <form action="{{ route('wallet-withdraw') }}" method="POST">
                         @csrf
                         <input type="hidden" name="user_id" value="{{ $user->id }}">
-                        <input type="hidden" name="wallet_id" value="{{ $user->wallet->id ?? null }}">
+                        <input type="hidden" name="pay_amount" class="pay_amount">
                         <input type="hidden" name="pay_currency_type" class="pay_currency_type">
-                        <input type="hidden" name="pay_amount">
                         <div class="form-group">
-                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                            <label class="sr-only" for="inlineFormInputGroup">Withdraw Fund</label>
                             <div class="input-group mb-2">
+                                <select name="currency" id="" class="form-select form-control currency">
+                                    <option value="">Select Currency</option>
+                                    <option value="btc">BTC</option>
+                                    <option value="usdt">USDT</option>
+                                </select>
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="mdi mdi-currency-usd"></i></div>
                                 </div>
                                 <input type="text" id="amount" name="amount" class="form-control"
                                     placeholder="Enter amount">
-                                <select name="currency" id="currency" class="form-select form-control currency">
-                                    <option value="">Select Currency</option>
-                                    <option value="btc">BTC</option>
-                                    <option value="usdt">USDT</option>
-                                </select>
                             </div>
                         </div>
                         <div class="usdt-value d-none align-items-center justify-content-between p-2">
@@ -273,12 +271,14 @@
 
 
         let currency = null;
+        let amount = null;
 
 
         currencyType.forEach(element => {
-            // element.preventDefault()
-
             element.addEventListener('change', function(e) {
+
+                e.preventDefault();
+
                 conversionRate.forEach(rate => {
                     rate.innerHTML = e.target.value
                 })
@@ -286,7 +286,7 @@
                 currency = e.target.value
 
 
-                currencyInputType.forEach(input =>{
+                currencyInputType.forEach(input => {
                     input.value = e.target.value
                 })
             })
@@ -298,23 +298,15 @@
 
         inputAmount.forEach(element => {
             element.addEventListener('keyup', function(e) {
-                e.preventDefault()
+                // e.preventDefault()
+                amount = e.target.value;
 
-                let value = e.target.value;
-
-                const result = estimate_price(value, currency);
-
-                result.then(data => {
-                    document.querySelector('.usdt-value').classList.add('d-flex')
-                    document.querySelector('.usdt-value .result').textContent = data
-                        .estimated_amount
-                    document.querySelector('.pay_amount').value = data.estimated_amount
-
-                })
+                const result = estimate_price(amount, currency);
             })
         });
 
-        // }
+
+
 
 
         async function estimate_price(value, type) {
@@ -326,7 +318,18 @@
                 }
 
                 const data = await response.json();
-                return data;
+                // return data;
+
+                // console.log(data)
+
+                document.querySelectorAll('.usdt-value').forEach(e => {
+                    // console.log(e.classList)
+                    e.classList.add('d-flex')
+                })
+                document.querySelectorAll('.usdt-value .result').forEach(e => {
+                    e.textContent = data.estimated_amount
+                })
+                document.querySelectorAll('.pay_amount').forEach(e => e.value = data.estimated_amount)
 
             } catch (error) {
                 error => console.log(`Error: ${error}`)

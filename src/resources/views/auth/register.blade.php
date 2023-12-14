@@ -10,17 +10,32 @@
                 <span>Create Account</span>
 
                 <div class="form-group">
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                     <input type="email" id="email" name="email" class="form-control" placeholder="Email Address">
                 </div>
                 <div class="form-group password">
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password">
-                    <i class="show-password icon ion-md-eye"></i>
+                    <i class="show-password icon ion-md-eye-off"></i>
 
                 </div>
                 <div class="form-group password">
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
                         placeholder="Confirm Password">
-                    <i class="show-password icon ion-md-eye"></i>
+                    <i class="show-password icon ion-md-eye-off"></i>
 
                 </div>
 
@@ -75,7 +90,7 @@
         show_password.forEach((element, index) => {
             element.addEventListener('click', function(e) {
 
-                if (this.classList.contains('ion-md-eye')) {
+                if (this.classList.contains('ion-md-eye-off')) {
                     this.classList.toggle('ion-md-eye')
                     this.classList.toggle('ion-md-eye-off')
 

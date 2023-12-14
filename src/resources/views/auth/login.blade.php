@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group password">
                     <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-                    <i class="show-password icon ion-md-eye"></i>
+                    <i class="show-password icon ion-md-eye-off"></i>
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -81,7 +81,7 @@
         show_password.forEach((element, index) => {
             element.addEventListener('click', function(e) {
 
-                if (this.classList.contains('ion-md-eye')) {
+                if (this.classList.contains('ion-md-eye-off')) {
                     this.classList.toggle('ion-md-eye')
                     this.classList.toggle('ion-md-eye-off')
 

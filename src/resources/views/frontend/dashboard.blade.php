@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h6 class="text-muted font-weight-normal">Total Income</h6>
+                            <h6 class="text-muted font-weight-normal">Pending Deposit</h6>
                         </div>
                     </div>
                 </div>

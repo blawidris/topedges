@@ -30,10 +30,10 @@ class HomeController extends Controller
     public function dashboard(Transaction $transaction, ReferalTracker $referal)
     {
 
-        if (empty(Auth::user()->status)){
-            Mail::to(Auth::user()->email)->send(new WelcomeMessage());
-        }
-            $trans = $transaction->sumTotalByType(Auth::id(), 'deposit');
+        // if (empty(Auth::user()->status)){
+        //     Mail::to(Auth::user()->email)->send(new WelcomeMessage());
+        // }
+        $trans = $transaction->sumTotalByType(Auth::id(), 'deposit');
         $referal = $referal->sumAllByUserId(Auth::id()) ?? 0;
 
         $total = $trans + $referal;
